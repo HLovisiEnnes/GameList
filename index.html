@@ -1,0 +1,120 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>List of games to play</title>
+  <meta charset="utf-8">
+        <!-- Import Nexa -->
+        <link href="https://fonts.cdnfonts.com/css/nexa-bold" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+        <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1>LIST OF GAMES TO PLAY</h1> 
+<form onsubmit="return formSubmitted();">
+      <fieldset>
+      <legend>New game</legend>
+        <table class = 'fieldTable'>
+          <tr>
+            <td><label>
+              Cover URL: 
+              <input type="text" id="cover">
+            </label></td>
+            <td><label>
+              Game name: 
+              <input type="text" id="name" required>
+            </label></td> 
+            <td><label>
+              Plataform:
+              <select id = 'plataform'>
+                <option value = 'Playstation 1'>Playstation 1</option>
+                <option value = 'Playstation 2'>Playstation 2</option>
+                <option value = 'Playstation 3'>Playstation 3</option>
+                <option value = 'Playstation 4'>Playstation 4</option>
+                <option value = 'Playstation 5'>Playstation 5</option>
+                <option value = 'Playstation Portable'>Playstation Portable</option>
+                <option value = 'Playstation Vita'>Playstation Vita</option>
+
+                <option value = 'Nintendo'>Nintendo</option>
+                <option value = 'Super Nintendo'>Super Nintendo</option>
+                <option value = 'Nintendo 64'>Nintendo 64</option>
+                <option value = 'GameCube'>GameCube</option>
+                <option value = 'Gameboy Advance'>Gameboy Advance</option>
+                <option value = 'Nintendo DS'>Nintendo DS</option>
+                <option value = 'Nintendo 3DS'>Nintendo 3DS</option>
+                <option value = 'Nintendo Wii'>Nintendo Wii</option>
+                <option value = 'Nintendo Wii U'>Nintendo Wii U</option>
+                <option value = 'Nintendo Switch'>Nintendo Switch</option>
+
+
+                <option value = 'Xbox'>Xbox</option>
+                <option value = 'Xbox 360'>Xbox 360</option>
+                <option value = 'Xbox One'>Xbox One</option>
+                <option value = 'Xbox Series X'>Xbox Series X</option>
+
+                <option value = 'PC'>PC</option>
+              </select>
+            </label></td>
+          </tr>
+          <tr>
+            <td><label>
+              Genre:
+              <select id = 'genre'>
+                <option value = 'Action'>Action</option>
+                <option value = 'Adventure'>Adventure</option>
+                <option value = "Beat 'em up">Beat 'em up</option>
+                <option value = 'Fighting'>Fighting</option>
+                <option value = 'First Person Shooter'>First Person Shooter</option>
+                <option value = 'Horror'>Horror</option>
+                <option value = 'Metroidvania'>Metroidvania</option>
+                <option value = 'Party'>Party</option>
+                <option value = 'Plataform'>Plataform</option>
+                <option value = 'Puzzle'>Puzzle</option>
+                <option value = 'Racing'>Racing </option>
+                <option value = 'Rhythm'>Rhythm </option>
+                <option value = 'Roguelike'>Roguelike</option>
+                <option value = 'RPG'>RPG</option>
+                <option value = 'Simulation'>Simulation</option>
+                <option value = 'Sport'>Sport</option>
+                <option value = 'Stealth'>Stealth</option>
+                <option value = 'Strategy'>Strategy</option>
+                <option value = 'Survival'>Survival</option>
+              </select>
+            </label></td>
+            <td><label>
+              Metacritic:
+            <input type="number" id="metacritics" min="0" max="100">
+            </label></td>
+            <td><label>
+              Time to beat:
+                <input type="number" id="time">
+          </label></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td><button>Add game</button></td>
+          </tr>
+      </table>
+    </fieldset>
+</form>
+<br>
+<table class = 'saveTable'>
+  <tr>
+    <td><button onclick="save()">Save to browser</button></td>
+    <td><button onclick="load()">Load from browser</button></td>
+    <td><button onclick="download()">Download JSON</button></td>
+    <td><button onclick="upload()">Load JSON</button></td>
+  </tr>
+</table>
+<br>
+<input type="text" id="searchForm" onkeyup="searchFunction()" placeholder="Search...">
+<br>
+<br>
+<table id="gameTable">
+ <caption>LIST OF GAMES TO PLAY</caption>  
+</table>
+</body>
+</html>
